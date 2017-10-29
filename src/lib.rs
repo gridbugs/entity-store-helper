@@ -23,7 +23,7 @@ pub use self::neighbour_count::NeighbourCount;
 /// ```
 #[macro_export]
 macro_rules! include_entity_store {
-    () => {
-        include!(concat!(env!("OUT_DIR"), "/entity_store_code_gen_out.rs"));
+    ($filename:expr) => {
+        include!(concat!(env!("OUT_DIR"), concat!("/", $filename)));
     }
 }
