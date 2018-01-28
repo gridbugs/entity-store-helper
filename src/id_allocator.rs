@@ -1,5 +1,6 @@
 use num::Integer;
 
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct IdAllocator<T: Integer + Copy>  {
     next: T,
     free_list: Vec<T>,
